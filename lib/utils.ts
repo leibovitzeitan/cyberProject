@@ -193,3 +193,17 @@ export async function autoMakePc(
     pcase: pcase,
   };
 }
+
+export function bgColorSwitch(route) {
+  switch (route) {
+    case "addicted_guy":
+      return "bg-green-100";
+    case "normie":
+      return "bg-blue-100";
+    case "netflix_and_chill":
+      return "bg-red-100";
+
+    default:
+      return "";
+  }
+}

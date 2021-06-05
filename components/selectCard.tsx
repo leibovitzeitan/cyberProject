@@ -11,7 +11,7 @@ const SelectCard: React.FC<SelectCardProps> = (props) => {
   const { text, bgColor, selected, onClick } = props;
   return (
     <div
-      className={`relative rounded-3xl bg-${bgColor} shadow-xl m-4 w-1/6 overflow-hidden hover:scale-110 transform transition duration-300 dark:bg-gray-800 ${
+      className={`relative rounded-3xl ${bgColor} shadow-xl m-4 w-1/6 overflow-hidden hover:scale-110 transform transition duration-300 dark:bg-gray-800 ${
         selected && ""
       }`}
       onClick={onClick}

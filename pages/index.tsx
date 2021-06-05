@@ -9,7 +9,7 @@ const Home: React.FC<HomeProps> = (props) => {
   const bgColor = useAppSelector(selectBgColor);
   return (
     <div
-      className={`flex items-center h-screen w-full transition duration-300 bg-${bgColor} flex-col pt-40 dark:bg-gray-900`}
+      className={`flex items-center h-screen w-full transition duration-300 ${bgColor} flex-col pt-40 dark:bg-gray-900`}
     >
       <Logo size={24} />
       <h1 className="font-title text-5xl font-bold text-gray-800 mb-16 dark:text-gray-100">
@@ -18,9 +18,9 @@ const Home: React.FC<HomeProps> = (props) => {
       <div className="flex justify-between items-start w-full mx-auto max-w-7xl">
         <Card
           title="נטפליקס וצ'יל"
-          color1="red-700"
-          color2="red-400"
-          bgColor="red-100"
+          color1="from-red-700"
+          color2="to-red-400"
+          bgColor="bg-red-100"
           link="/applications-games?route=netflix_and_chill"
         >
           מחשב לצרכים קלים עד בנוניים.
@@ -31,9 +31,9 @@ const Home: React.FC<HomeProps> = (props) => {
         </Card>
         <Card
           title="משחקאי מעת לעת"
-          color1="blue-600"
-          color2="purple-600"
-          bgColor="blue-100"
+          color1="from-blue-600"
+          color2="to-purple-600"
+          bgColor="bg-blue-100"
           link="/applications-games?route=normie"
         >
           מחשב לצרכים בינוניים עד גבוהים.
@@ -48,9 +48,9 @@ const Home: React.FC<HomeProps> = (props) => {
         </Card>
         <Card
           title="בחור מכור"
-          color1="green-700"
-          color2="green-400"
-          bgColor="green-100"
+          color1="from-green-700"
+          color2="to-green-400"
+          bgColor="bg-green-100"
           link="/applications-games?route=addicted_guy"
         >
           מחשב ברמה הגבוהה ביותר.
@@ -85,7 +85,7 @@ const Card: React.FC<CardProps> = (props) => {
           onMouseLeave={() => dispatch(changeBg(null))}
         >
           <h1
-            className={`text-6xl mb-4 font-black font-title text-transparent bg-clip-text bg-gradient-to-br from-${props.color1} to-${props.color2} text-center`}
+            className={`text-6xl mb-4 font-black font-title text-transparent bg-clip-text bg-gradient-to-br ${props.color1} ${props.color2} text-center`}
           >
             {props.title}
           </h1>

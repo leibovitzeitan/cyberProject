@@ -1,21 +1,8 @@
-import React, { useState } from "react";
-import SelectCard from "../components/selectCard";
 import { useRouter } from "next/router";
+import React, { useState } from "react";
 import NextButton from "../components/NextButton";
-
-function bgColorSwitch(route) {
-  switch (route) {
-    case "addicted_guy":
-      return "green-100";
-    case "normie":
-      return "blue-100";
-    case "netflix_and_chill":
-      return "red-100";
-
-    default:
-      return "";
-  }
-}
+import SelectCard from "../components/selectCard";
+import { bgColorSwitch } from "../lib/utils";
 
 function selectedSwitch(selectionNum, cpu, gpu, ram) {
   switch (selectionNum) {
@@ -41,7 +28,7 @@ const Res: React.FC<ResProps> = (props) => {
 
   return (
     <div
-      className={`flex items-center min-h-screen w-full transition duration-300 bg-${bgColor} flex-col pt-40 dark:bg-gray-900`}
+      className={`flex items-center min-h-screen w-full transition duration-300 ${bgColor} flex-col pt-40 dark:bg-gray-900`}
     >
       <h1 className="font-title text-5xl font-bold text-gray-800 mb-16 dark:text-gray-100">
         באיזו רזולוצייה המסך שלך?
@@ -49,19 +36,19 @@ const Res: React.FC<ResProps> = (props) => {
       <div className="flex flex-wrap justify-center items-start w-full mx-auto max-w-7xl">
         <SelectCard
           text="1080p"
-          bgColor="red-400"
+          bgColor="bg-red-400"
           selected={selected == 1}
           onClick={() => setSelected(1)}
         ></SelectCard>
         <SelectCard
           text="1440p"
-          bgColor="blue-400"
+          bgColor="bg-blue-400"
           selected={selected == 2}
           onClick={() => setSelected(2)}
         ></SelectCard>
         <SelectCard
           text="4K"
-          bgColor="green-400"
+          bgColor="bg-green-400"
           selected={selected == 3}
           onClick={() => setSelected(3)}
         ></SelectCard>
@@ -70,7 +57,7 @@ const Res: React.FC<ResProps> = (props) => {
       <NextButton
         disabled={selected == 0}
         text="מעבר לדף הבא"
-        bgColor="gray-50"
+        bgColor="bg-gray-50"
         link="/lifespan"
         query={{ route, ...selectedSwitch(selected, cpu, gpu, ram) }}
       ></NextButton>

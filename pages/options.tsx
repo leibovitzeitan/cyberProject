@@ -1,25 +1,11 @@
-import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import React from "react";
-import dynamic from "next/dynamic";
+import { bgColorSwitch } from "../lib/utils";
 
 const BuildCard = dynamic(() => import("../components/BuildCard"), {
   ssr: false,
 });
-
-function bgColorSwitch(route) {
-  switch (route) {
-    case "addicted_guy":
-      return "green-100";
-    case "normie":
-      return "blue-100";
-    case "netflix_and_chill":
-      return "red-100";
-
-    default:
-      return "";
-  }
-}
 
 interface OptionsProps {}
 const Options: React.FC<OptionsProps> = (props) => {
@@ -30,7 +16,7 @@ const Options: React.FC<OptionsProps> = (props) => {
 
   return (
     <div
-      className={`flex items-center h-screen w-full transition duration-300 bg-${bgColor} flex-col pt-40 dark:bg-gray-900`}
+      className={`flex items-center h-screen w-full transition duration-300 ${bgColor} flex-col pt-40 dark:bg-gray-900`}
     >
       <h1 className="font-title text-5xl font-bold text-gray-800 mb-16  dark:text-gray-100">
         המחשב
@@ -39,9 +25,8 @@ const Options: React.FC<OptionsProps> = (props) => {
         cpu={parseInt(cpu as string)}
         gpu={parseInt(gpu as string)}
         ram={parseInt(ram as string)}
-        route = {route as string}
-      >
-      </BuildCard>
+        route={route as string}
+      ></BuildCard>
     </div>
   );
 };

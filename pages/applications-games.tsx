@@ -3,6 +3,7 @@ import ImageCard from "../components/ImageCard";
 import { useRouter } from "next/router";
 import NextButton from "../components/NextButton";
 import games, { Game } from "../lib/games";
+import { bgColorSwitch } from "../lib/utils";
 
 function routeSwitch(route) {
   switch (route) {
@@ -51,20 +52,6 @@ function routeSwitch(route) {
   }
 }
 
-function bgColorSwitch(route) {
-  switch (route) {
-    case "addicted_guy":
-      return "green-100";
-    case "normie":
-      return "blue-100";
-    case "netflix_and_chill":
-      return "red-100";
-
-    default:
-      return "";
-  }
-}
-
 function calculateScore(apps: Game[], selected: boolean[]) {
   const selectedGames = selected
     .map((item, i) => (item ? apps[i] : null))
@@ -87,7 +74,7 @@ const Home: React.FC<HomeProps> = (props) => {
   const bgColor = bgColorSwitch(route);
   return (
     <div
-      className={`flex items-center min-h-screen w-full transition duration-300 bg-${bgColor} flex-col pt-40 dark:bg-gray-900`}
+      className={`flex items-center min-h-screen w-full transition duration-300 ${bgColor} flex-col pt-40 dark:bg-gray-900`}
     >
       <h1 className="font-title text-5xl font-bold text-gray-800 mb-16 dark:text-gray-100">
         באילו משחקים ותוכנות אתה משתמש?
@@ -108,7 +95,7 @@ const Home: React.FC<HomeProps> = (props) => {
       <NextButton
         disabled={selected.every((app) => app === false)}
         text="מעבר לדף הבא"
-        bgColor="gray-50"
+        bgColor="bg-gray-50"
         link="/resolution"
         query={{ route, ...calculateScore(apps, selected) }}
       ></NextButton>
