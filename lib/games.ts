@@ -31,7 +31,7 @@ const games: Game[] = [
     {name:"Word", image:"/images/Microsoft-Word-Logo.png", cpuScore:500, gpuScore:800, ramAmount:4, needRtx:false},//20
     {name:"Powerpoint", image:"/images/powerpoint.png", cpuScore:500, gpuScore:800, ramAmount:4, needRtx:false},//21
     {name:"Excel", image:"/images/Microsoft-Excel-Logo.jpg", cpuScore:500, gpuScore:800, ramAmount:4, needRtx:false},//22
-    {name:"Chrome", image:"/images/Google-Chrome-logo.png", cpuScore:500, gpuScore:800, ramAmount:4, needRtx:false},//23
+    {name:"Chrome", image:"/images/Google-Chrome-logo.png", cpuScore:500, gpuScore:800, ramAmount:8, needRtx:false},//23
     {name:"Microsoft Edge", image:"/images/microsoftedgenewlogo.5.jpg", cpuScore:500, gpuScore:800, ramAmount:4, needRtx:false},//24
     {name:"Rocket League", image:"/images/Rocket_League_coverart.jpg", cpuScore:3600, gpuScore:4800, ramAmount:8, needRtx:false},//25
     {name:"Among Us", image:"/images/among-us-font.jpg", cpuScore:500, gpuScore:800, ramAmount:4, needRtx:false},//26
