@@ -14,6 +14,7 @@ const RouteBg: React.FC<RouteBgProps> = (props) => {
   useEffect(() => {
     dispatch(changeBg(bgColorRoute));
   }, [route]);
+  
   return <div className={`transition duration-300 ${bgColor} min-h-screen`}>{props.children}</div>;
 };
 
