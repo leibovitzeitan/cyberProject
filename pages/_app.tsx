@@ -1,15 +1,18 @@
-import React from "react";
 import type { AppProps } from "next/app";
-import { Provider } from 'react-redux'
-
-import 'tailwindcss/tailwind.css'
-
-import store from '../lib/store'
+import React from "react";
+import { Provider } from "react-redux";
+import "tailwindcss/tailwind.css";
+import Navbar from "../components/navbar";
+import RouteBg from "../components/RouteBg";
+import store from "../lib/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <Component {...pageProps} />
+      <RouteBg>
+        <Navbar />
+        <Component {...pageProps} />
+      </RouteBg>
     </Provider>
   );
 }

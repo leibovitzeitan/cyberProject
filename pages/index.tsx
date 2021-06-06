@@ -6,12 +6,10 @@ import Logo from "../components/Logo";
 
 interface HomeProps {}
 const Home: React.FC<HomeProps> = (props) => {
-  const bgColor = useAppSelector(selectBgColor);
   return (
     <div
-      className={`flex items-center h-screen w-full transition duration-300 ${bgColor} flex-col pt-40 dark:bg-gray-900`}
+      className={`flex items-center w-full flex-col pt-12 dark:bg-gray-900`}
     >
-      <Logo size={24} />
       <h1 className="font-title text-5xl font-bold text-gray-800 mb-16 dark:text-gray-100">
         מה השימוש שלך במחשב?
       </h1>

@@ -1,12 +1,17 @@
 import React from "react";
 
 interface LogoProps {
-    size: number;
-  }
+  wsize: string;
+  hsize: string;
+}
 
-const Logo: React.FC<LogoProps> = ({size}) => {
+const Logo: React.FC<LogoProps> = ({wsize, hsize}) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 834 833" className={`w-${size} h-${size}`}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 834 833"
+      className={`${wsize} ${hsize}`}
+    >
       <path
         fill="#A93A49"
         fillRule="evenodd"
@@ -39,6 +44,6 @@ const Logo: React.FC<LogoProps> = ({size}) => {
       ></path>
     </svg>
   );
-}
+};
 
 export default Logo;

@@ -204,6 +204,6 @@ export function bgColorSwitch(route) {
       return "bg-red-100";
 
     default:
-      return "";
+      return "bg-gray-100";
   }
 }
