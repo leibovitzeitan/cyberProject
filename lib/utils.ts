@@ -1,6 +1,5 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
-import { stringify } from "node:querystring";
 import {
   CPU,
   GPU,
@@ -16,6 +15,7 @@ import {
   HDD,
   WirelessCard,
   OpticalDrive,
+  BaseItem,
 } from "../lib/types";
 
 export interface PC {
@@ -206,4 +206,19 @@ export function bgColorSwitch(route) {
     default:
       return "bg-gray-100";
   }
+}
+
+export function itemLink(item: BaseItem): string {
+  const ivoryId = item.storeId.ivory;
+  const kspId = item.storeId.ksp;
+  const ivoryLink = "https://www.ivory.co.il/catalog.php?id=" + ivoryId;
+  const kspLink = "https://ksp.co.il/web/item/" + kspId;
+
+  if (ivoryId && kspId) {
+    if (Math.min(...Object.values(item.price)) === item.price.ivory)
+      return ivoryLink;
+    return kspLink;
+  }
+  if (ivoryId) return ivoryLink;
+  return kspLink;
 }

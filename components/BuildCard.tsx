@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { BaseItem } from "../lib/types";
-import { autoMakePc, PC } from "../lib/utils";
+import { autoMakePc, itemLink, PC } from "../lib/utils";
 
 interface BuildCardProps {
   cpu: number;
@@ -34,8 +34,10 @@ const BuildCard: React.FC<BuildCardProps> = ({ cpu, gpu, ram, route }) => {
             <ul className="list-disc">
               {Object.values(pc)
                 .filter((item) => item)
-                .map((item: BaseItem) => (
-                  <li>{item.model}</li>
+                .map((item: BaseItem, i) => (
+                  <li key={i}>
+                    <a href={itemLink(item)}>{item.model}</a>
+                  </li>
                 ))}
             </ul>
           </div>
