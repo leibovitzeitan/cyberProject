@@ -8,7 +8,7 @@ interface HomeProps {}
 const Home: React.FC<HomeProps> = (props) => {
   return (
     <div
-      className={`flex items-center w-full flex-col pt-12 dark:bg-gray-900`}
+      className={`flex items-center w-full flex-col pt-12`}
     >
       <h1 className="font-title text-5xl font-bold text-gray-800 mb-16 dark:text-gray-100">
         מה השימוש שלך במחשב?
@@ -18,7 +18,7 @@ const Home: React.FC<HomeProps> = (props) => {
           title="נטפליקס וצ'יל"
           color1="from-red-700"
           color2="to-red-400"
-          bgColor="bg-red-100"
+          bgColor="bg-red-100  dark:bg-red-900"
           link="/applications-games?route=netflix_and_chill"
         >
           מחשב לצרכים קלים עד בנוניים.
@@ -31,7 +31,7 @@ const Home: React.FC<HomeProps> = (props) => {
           title="משחקאי מעת לעת"
           color1="from-blue-600"
           color2="to-purple-600"
-          bgColor="bg-blue-100"
+          bgColor="bg-blue-100  dark:bg-blue-900"
           link="/applications-games?route=normie"
         >
           מחשב לצרכים בינוניים עד גבוהים.
@@ -48,7 +48,7 @@ const Home: React.FC<HomeProps> = (props) => {
           title="בחור מכור"
           color1="from-green-700"
           color2="to-green-400"
-          bgColor="bg-green-100"
+          bgColor="bg-green-100  dark:bg-green-900"
           link="/applications-games?route=addicted_guy"
         >
           מחשב ברמה הגבוהה ביותר.

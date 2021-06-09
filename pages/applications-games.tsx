@@ -72,7 +72,7 @@ const Home: React.FC<HomeProps> = (props) => {
     setSelected(new Array(apps.length).fill(false));
   return (
     <div
-      className={`flex items-center w-full flex-col pt-12 dark:bg-gray-900`}
+      className={`flex items-center w-full flex-col pt-12`}
     >
       <h1 className="font-title text-5xl font-bold text-gray-800 mb-16 dark:text-gray-100">
         באילו משחקים ותוכנות אתה משתמש?
@@ -93,7 +93,7 @@ const Home: React.FC<HomeProps> = (props) => {
       <NextButton
         disabled={selected.every((app) => app === false)}
         text="מעבר לדף הבא"
-        bgColor="bg-gray-50"
+        bgColor="bg-gray-50 dark:bg-gray-800"
         link="/resolution"
         query={{ route, ...calculateScore(apps, selected) }}
       ></NextButton>

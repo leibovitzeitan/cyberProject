@@ -8,7 +8,7 @@ interface PathState {
 
 // Define the initial state using that type
 const initialState: PathState = {
-  bgColor: 'bg-gray-100',
+  bgColor: 'bg-gray-100 dark:bg-gray-900',
 }
 
 export const pathSlice = createSlice({

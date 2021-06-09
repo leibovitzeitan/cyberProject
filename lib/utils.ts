@@ -76,7 +76,7 @@ export async function autoMakePc(
     .orderBy("price")
     .limit(1)
     .get()
-    .then((res) => res.docs[0].data() as MB);
+    .then((res) => res.docs[0]? res.docs[0].data() as MB : null);
   const ram = await db
     .collection("RAM")
     .where("capacity", "==", String(ramAmount) + "GB")
@@ -92,7 +92,7 @@ export async function autoMakePc(
       .orderBy("price")
       .limit(1)
       .get()
-      .then((res) => res.docs[0].data() as CPULiquidCooler);
+      .then((res) => res.docs[0]? res.docs[0].data() as CPULiquidCooler : null);
   } else {
     CPUCooler = await db
       .collection("CPUAirCooler")
@@ -100,7 +100,7 @@ export async function autoMakePc(
       .orderBy("price")
       .limit(1)
       .get()
-      .then((res) => res.docs[0].data() as CPUAirCooler);
+      .then((res) => res.docs[0]? res.docs[0].data() as CPULiquidCooler : null);
   }
   const psu = await db
     .collection("PSU")
@@ -197,14 +197,14 @@ export async function autoMakePc(
 export function bgColorSwitch(route) {
   switch (route) {
     case "addicted_guy":
-      return "bg-green-100";
+      return "bg-green-100  dark:bg-green-900";
     case "normie":
-      return "bg-blue-100";
+      return "bg-blue-100  dark:bg-blue-900";
     case "netflix_and_chill":
-      return "bg-red-100";
+      return "bg-red-100  dark:bg-red-900";
 
     default:
-      return "bg-gray-100";
+      return "bg-gray-100  dark:bg-gray-900";
   }
 }
 

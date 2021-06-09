@@ -36,7 +36,7 @@ const BuildCard: React.FC<BuildCardProps> = ({ cpu, gpu, ram, route }) => {
                 .filter((item) => item)
                 .map((item: BaseItem, i) => (
                   <li key={i}>
-                    <a href={itemLink(item)}>{item.model}</a>
+                    <a href={itemLink(item)} target='_blank'>{item.model}</a>
                   </li>
                 ))}
             </ul>

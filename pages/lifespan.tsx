@@ -26,7 +26,7 @@ const LifeSpan: React.FC<LifeSpanProps> = (props) => {
 
   return (
     <div
-      className={`flex items-center w-full flex-col pt-12 dark:bg-gray-900`}
+      className={`flex items-center w-full flex-col pt-12`}
     >
       <h1 className="font-title text-5xl font-bold text-gray-800 mb-16 dark:text-gray-100">
         כמה שנים אתה מתכנן להשתמש במחשב שלך?
@@ -34,19 +34,19 @@ const LifeSpan: React.FC<LifeSpanProps> = (props) => {
       <div className="flex flex-wrap justify-center items-start w-full mx-auto max-w-7xl">
         <SelectCard
           text="3 שנים"
-          bgColor="bg-red-400"
+          bgColor="bg-red-400  dark:bg-red-700"
           selected={selected == 1}
           onClick={() => setSelected(1)}
         ></SelectCard>
         <SelectCard
           text="6 שנים"
-          bgColor="bg-blue-400"
+          bgColor="bg-blue-400  dark:bg-blue-700"
           selected={selected == 2}
           onClick={() => setSelected(2)}
         ></SelectCard>
         <SelectCard
           text="9 שנים"
-          bgColor="bg-green-400"
+          bgColor="bg-green-400  dark:bg-green-700"
           selected={selected == 3}
           onClick={() => setSelected(3)}
         ></SelectCard>
@@ -55,7 +55,7 @@ const LifeSpan: React.FC<LifeSpanProps> = (props) => {
       <NextButton
         disabled={selected == 0}
         text="מעבר לדף הבא"
-        bgColor="bg-gray-50"
+        bgColor="bg-gray-50 dark:bg-gray-800"
         link="/options"
         query={{ route, ...selectedSwitch(selected, cpu, gpu, ram) }}
       ></NextButton>

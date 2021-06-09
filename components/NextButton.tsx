@@ -15,9 +15,9 @@ const NextButton: React.FC<NextButtonProps> = (props) => {
   if (disabled) {
     return (
       <div
-        className={`relative rounded-3xl ${bgColor} shadow-xl m-4 overflow-hidden hover:scale-110 transform transition duration-300 dark:bg-gray-800`}
+        className={`relative rounded-3xl ${bgColor} shadow-xl m-4 overflow-hidden hover:scale-110 transform transition duration-300 `}
       >
-        <div className="text-gray-900 p-5 text-4xl font-black font-title bg-clip-text text-center">
+        <div className="text-gray-900 p-5 text-4xl font-black font-title bg-clip-text text-center dark:text-gray-100">
           {props.text}
         </div>
       </div>
@@ -30,9 +30,9 @@ const NextButton: React.FC<NextButtonProps> = (props) => {
       }}>
       <a>
         <div
-          className={`relative rounded-3xl ${bgColor} shadow-xl m-4 overflow-hidden hover:scale-110 transform transition duration-300 dark:bg-gray-800`}
+          className={`relative rounded-3xl ${bgColor} shadow-xl m-4 overflow-hidden hover:scale-110 transform transition duration-300 `}
         >
-          <div className="text-gray-900 p-5 text-4xl font-black font-title bg-clip-text text-center">
+          <div className="text-gray-900 p-5 text-4xl font-black font-title bg-clip-text text-center dark:text-gray-100">
             {props.text}
           </div>
         </div>
