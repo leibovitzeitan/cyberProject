@@ -150,12 +150,10 @@ export async function autoMakePc(
     pcase = await db
       .collection("case")
       .where("type", "==", "Midi ATX")
-      .where("price", "<", 400)
-      .where("price", ">", 300)
       .orderBy("price")
-      .limit(1)
+      .limit(12)
       .get()
-      .then((res) => res.docs[0].data() as Case);
+      .then((res) => res.docs[10].data() as Case);
   } else {
     ssd = await db
       .collection("SSD")

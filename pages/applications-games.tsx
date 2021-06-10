@@ -3,7 +3,6 @@ import ImageCard from "../components/ImageCard";
 import { useRouter } from "next/router";
 import NextButton from "../components/NextButton";
 import games, { Game } from "../lib/games";
-import { bgColorSwitch } from "../lib/utils";
 
 function routeSwitch(route) {
   switch (route) {
@@ -31,7 +30,28 @@ function routeSwitch(route) {
         games[19],
       ];
     case "normie":
-      return [];
+      return [
+        games[1],
+        games[6],
+        games[10],
+        games[12],
+        games[13],
+        games[15],
+        games[16],
+        games[17],
+        games[18],
+        games[19],
+        games[25],
+        games[28],
+        games[29],
+        games[30],
+        games[31],
+        games[32],
+        games[33],
+        games[34],
+        games[35],
+        games[36],
+      ];
     case "netflix_and_chill":
       return [
         games[20],

@@ -36,8 +36,16 @@ const games: Game[] = [
     {name:"Rocket League", image:"/images/Rocket_League_coverart.jpg", cpuScore:3600, gpuScore:4800, ramAmount:8, needRtx:false},//25
     {name:"Among Us", image:"/images/among-us-font.jpg", cpuScore:500, gpuScore:800, ramAmount:4, needRtx:false},//26
     {name:"Zoom", image:"/images/Zoomlogo.png", cpuScore:1000, gpuScore:1000, ramAmount:4, needRtx:false},//27
+    //
+    {name:"Paladins", image:"/images/Paladins_Logo.png", cpuScore:1500, gpuScore:2200, ramAmount:8, needRtx:false},//28
+    {name:"Overwatch", image:"/images/overwatch.png", cpuScore:1500, gpuScore:2200, ramAmount:8, needRtx:false},//29
+    {name:"Portal 2", image:"/images/portal2.png", cpuScore:800, gpuScore:1000, ramAmount:8, needRtx:false},//30
+    {name:"Brawlhalla", image:"/images/brawlhalla.png", cpuScore:1000, gpuScore:1000, ramAmount:8, needRtx:false},//31
+    {name:"Resident evil", image:"/images/residentevil.png", cpuScore:6800, gpuScore:8000, ramAmount:16, needRtx:false},//32
+    {name:"The Witcher 3", image:"/images/witcher.png", cpuScore:3200, gpuScore:2600, ramAmount:8, needRtx:false},//33
+    {name:"Ghostrunner", image:"/images/ghostrunner.png", cpuScore:4100, gpuScore:4600, ramAmount:8, needRtx:false},//34
+    {name:"World of Warcraft", image:"/images/worldofwarcraft.jpg", cpuScore:7000, gpuScore:7900, ramAmount:8, needRtx:false},//35
+    {name:"Skyrim", image:"/images/skyrim.png", cpuScore:2400, gpuScore:3500, ramAmount:8, needRtx:false}//36
 ];
-
-const cpus={low: [], mid:[]}
 
 export default games;

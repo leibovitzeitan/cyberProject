@@ -28,7 +28,7 @@ const Res: React.FC<ResProps> = (props) => {
     <div
       className={`flex items-center w-full flex-col pt-12`}
     >
-      <h1 className="font-title text-5xl font-bold text-gray-800 mb-16 dark:text-gray-100">
+      <h1 className="md:text-center font-title text-5xl font-bold text-gray-800 mb-16 dark:text-gray-100">
         באיזו רזולוצייה המסך שלך?
       </h1>
       <div className="flex flex-wrap justify-center items-start w-full mx-auto max-w-7xl">
