@@ -201,7 +201,7 @@ export function bgColorSwitch(route) {
     case "netflix_and_chill":
       return "bg-red-100  dark:bg-red-900";
 
-    default:
+    default: 
       return "bg-gray-100  dark:bg-gray-900";
   }
 }

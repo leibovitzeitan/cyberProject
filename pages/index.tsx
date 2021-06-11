@@ -1,8 +1,7 @@
-import React from "react";
-import { useAppDispatch, useAppSelector } from "../lib/hooks";
-import { changeBg, selectBgColor } from "../lib/slices/pathSlice";
 import Link from "next/link";
-import Logo from "../components/Logo";
+import React from "react";
+import { useAppDispatch } from "../lib/hooks";
+import { changeBg } from "../lib/slices/pathSlice";
 
 interface HomeProps {}
 const Home: React.FC<HomeProps> = (props) => {
