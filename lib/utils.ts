@@ -172,11 +172,11 @@ export async function autoMakePc(
       .then((res) => res.docs[0].data() as HDD);
     pcase = await db
       .collection("case")
-      .where("type", "==", "Full ATX")
+      .where("type", "==", "Midi ATX")
       .orderBy("price")
-      .limit(1)
+      .limit(52)
       .get()
-      .then((res) => res.docs[0].data() as Case);
+      .then((res) => res.docs[49].data() as Case);
   }
   console.log(cpu, gpu, ram, mb, CPUCooler, psu, ssd, hdd, pcase);
   return {
